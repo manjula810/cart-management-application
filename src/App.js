@@ -6,12 +6,12 @@ export default function App() {
   const [searchVal, setSearchVal] = useState("");
 
   async function getProducts() {
-    const res = await fetch("http://localhost:5000/api/products");
+    const res = await fetch("https://cart-management-application.onrender.com/api/products");
     const data = await res.json();
     setProducts(data);
   }
   async function getCartItems() {
-    const res = await fetch("http://localhost:5000/api/carts");
+    const res = await fetch("https://cart-management-application.onrender.com/api/carts");
     const data = await res.json();
     setcart(data);
   }
@@ -28,7 +28,7 @@ export default function App() {
       return;
     }
 
-    const res = await fetch("http://localhost:5000/api/carts", {
+    const res = await fetch("https://cart-management-application.onrender.com/api/carts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export default function App() {
   }
 
   async function removeItem(itemId) {
-    const res = await fetch(`http://localhost:5000/api/carts/${itemId}`, {
+    const res = await fetch(`https://cart-management-application.onrender.com/api/carts/${itemId}`, {
       method: "DELETE",
     });
     const data = await res.json();
@@ -53,7 +53,7 @@ export default function App() {
   }
 
   async function UpdateQuantity(itemId, newQuantity) {
-    const res = await fetch(`http://localhost:5000/api/carts/${itemId}`, {
+    const res = await fetch(`https://cart-management-application.onrender.com/api/carts/${itemId}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
@@ -76,7 +76,7 @@ export default function App() {
   );
 
   const platformFee = 20;
-  const res = await fetch("http://localhost:5000/api/carts", {
+  const res = await fetch("https://cart-management-application.onrender.com/api/carts", {
     method: "DELETE"
   });
 
