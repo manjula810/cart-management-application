@@ -1,0 +1,741 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  position: relative;
+}
+
+nav {
+  padding: 30px;
+  width: 100%;
+  height: 15%;
+  position:fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #a3a3a3;
+  z-index: 1000;
+  cursor: pointer;
+  background: linear-gradient(
+    180deg,
+    rgba(163, 163, 163, 1) 24%,
+    rgba(194, 194, 194, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+}
+
+.head {
+  margin-right: 150px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  /* text-align: center; */
+  /* background-color: chartreuse; */
+  display: flex;
+  /* justify-content:flex-end; */
+  align-items:center;
+}
+nav p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav p a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+  /* display:flex; */
+}
+.error-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #606060;
+  font-size: medium;
+}
+
+nav .cart-sec{
+  /* width: 100px;
+  height: 40px;
+  background-color: aqua; */
+  position: relative;
+   color: #000;
+   
+  text-decoration: none;
+  font-weight: 400;
+}
+.item-count{
+  width: 15px;
+  height: 15px;
+  background-color: #eeeeee;
+  border-radius: 50%;
+  border: 1px solid #212121;
+  position: absolute;
+  top:0;
+  left:12px;
+  bottom: 20px;
+  text-align: center;
+  font-size: 10px;
+  /* font-weight: 700; */
+}
+.searchbox {
+  width: 200px;
+  height: 35px;
+  outline: none;
+  border-radius: 20px;
+  border: solid #222 2px;
+  padding: 0.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+.searchbox input {
+  width: 75%;
+  height: 100%;
+  outline: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  /* padding:6px; */
+  border: none;
+  padding-left: 15px;
+}
+.search-btn {
+  width: 25%;
+  height: 100%;
+  outline: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* padding: 5px; */
+  background-color: transparent;
+  border: none;
+  margin-top: 1px;
+  margin-left: 5px;
+}
+.search-btn:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.video-cont {
+  width: 100%;
+  height: auto;   /* instead of fixed 500px */
+  max-height: 80vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.video-cont video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures video fills container */
+}
+
+.text1 {
+  font-size: 70px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  text-wrap: nowrap;
+  color: #aaa;
+}
+.text2 {
+  font-size: 50px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  animation: typing 3s linear forwards;
+}
+/************************ men ************************ */
+.cloth-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100vw;
+  height: auto;
+  flex-wrap: wrap;
+  /* background-color: chocolate; */
+}
+.section-name {
+  font-size: 70px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  text-wrap: nowrap;
+  color: #aaa;
+}
+.outer-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 15px; 
+  
+
+  align-self: center;
+  justify-self: center;
+  /* background-color: rgb(144, 117, 99); */
+}
+
+.box-cont {
+  gap: 10px;
+  margin: 20px 20px;
+  padding: 15px 15px;
+  width: 350px;
+  height: 450px;
+  /* border: 1px solid grey; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  transition: 0.3s ease-in;
+  /* background-color: coral; */
+}
+.box-cont:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transform: scale(0.9);
+  transform-origin: center;
+}
+.box-cont img {
+  width: 100%;
+  height: 75%;
+  transition: 0.2s ease-in;
+}
+
+.description {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes left + right */
+}
+.product-name {
+  font-weight: 500;
+  /* background-color: aqua; */
+}
+
+.box-cont button {
+  border: none;
+  background-color: transparent;
+}
+.box-cont .price {
+  font-weight: 400;
+  width: 100%;
+  height: 5%;
+}
+.box-cont .cart-btn {
+  width: 100%;
+  height: 10%;
+  background-color: rgb(27, 27, 27);
+  color: white;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.cart-btn:hover {
+  background-color: black;
+}
+
+/* *******************cart section ***************************/
+.cart-section {
+  display: flex;
+       justify-content: center;
+       align-items: center;
+  /* flex-wrap: wrap; */
+  margin-top: 20px;
+  width: 100vw;
+  height: auto;
+  gap: 10px;
+  /* background-color: #9ac4cf; */
+  /* background-color: chocolate; */
+}
+.cartouter-box {
+  background-color: #eeeeee;
+  margin: 20px 0;
+  padding: 15px 15px;
+  width:100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.priceInfo-cont{
+       margin: 20px 0;
+  padding: 15px 15px;
+        width:20%;
+        height: 50%;
+        background-color: #eeeeee;
+        justify-self: flex-start;
+        align-self:flex-start;
+    }
+    .priceInfo-cont h3{
+        font-weight: 500;
+        color: #606060;
+        /* font-weight: 400; */
+    }
+.cart-cont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: 20%;
+  /* background-color: blue; */
+  border-bottom: 1px solid rgb(158, 158, 158);
+  gap: 10px;
+  padding: 10px 25px;
+}
+
+.cart-info img {
+  width: 150px;
+  height: 150px;
+}
+.cart-info .qty-btncont {
+  width: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* justify-items: center; */
+}
+.qty-btncont button {
+  background-color: white;
+  cursor: pointer;
+}
+.qty-btncont .qbtn {
+  font-size: 15px;
+  outline: none;
+  border: 1px solid grey;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.dec-qty-btn {
+  justify-self: start;
+  align-self: center;
+}
+.qty-btn {
+  font-size: 15px;
+  outline: none;
+  border: 1px solid grey;
+  width: 60px;
+  height: 30px;
+  justify-self: center;
+}
+.inc-qty-btn {
+  justify-self: end;
+  align-self: center;
+}
+
+.cart-desc {
+  /* background-color: rgba(0, 255, 255, 0.368); */
+  grid-column: 2/4;
+}
+.cart-desc .description {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.cart-desc .product-name {
+  justify-self: start;
+  align-self: start;
+}
+.cart-desc .random-txt {
+  justify-self: start;
+  align-self: start;
+  /* background-color: aqua; */
+  color: #606060;
+  font-weight: 400;
+}
+.cart-desc .remove-btn {
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgb(27, 27, 27);
+  color: white;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  justify-self: start;
+  align-self: start;
+  transition: all 0.2s;
+}
+.cart-desc button:hover {
+  background-color: #000000;
+}
+.cart-desc .price {
+  justify-self: start;
+  align-self: start;
+  font-weight: 400;
+}
+.orderbtn-cont {
+  padding: 25px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.orderbtn-cont button {
+  padding: 10px;
+  background-color: rgb(255, 92, 33);
+  color: white;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+.orderbtn-cont button:hover{
+  background-color: rgb(255, 68, 0);
+}
+table td{
+  font-size: 14px;
+  color: #212121;
+  padding: 12px 0px;
+  font-weight: 400;
+ 
+}
+table td:nth-child(even){
+  display: inline-block;
+  margin-left: 120px;
+ 
+}
+.priceInfo-cont div{
+  color: #000;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+.emptymsg-cont{
+width: 100%;
+height: 100px;
+background-color: #d0d0d0;
+color: rgb(74, 74, 74);
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 20px 0;
+}
+                  @media all and (max-width: 600px){
+.searchbox {
+  display: none;
+}
+.head {
+  margin-right:0;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+nav {
+  padding: 30px;
+  width: 100%;
+  height: 40%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  background: #a3a3a3;
+  z-index: 2;
+  cursor: pointer;
+  background: linear-gradient(
+    180deg,
+    rgba(163, 163, 163, 1) 24%,
+    rgba(194, 194, 194, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  
+}
+
+nav p a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  justify-content:flex-end;
+  align-items:flex-end;
+  /* background-color: blueviolet; */
+}
+nav .cart-sec{
+  position: relative;
+}
+.item-count{
+  width: 15px;
+  height: 15px;
+  background-color: #eeeeee;
+  border-radius: 50%;
+  border: 1px solid #212121;
+  position: absolute;
+  top:0;
+  left:12px;
+  bottom: 25px;
+  
+  text-align: center;
+  font-size: 10px;
+}
+  /* .video-cont {
+  top: 0;
+  width: 100%;
+  height:500px;
+  background-color: aqua;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+} */
+
+.text1 {
+ 
+  margin: 0 50px;
+  font-size: 23px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: #aaa;
+}
+.text2 {
+  margin: 0 20px;
+  font-size: 25px;
+  position:absolute;
+  color: #ffffff;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, 50%);
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  
+}
+
+
+  /******************************CLOTH-SECTION******************/
+ .section-name {
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: #aaa;
+}
+.outer-box {
+  margin: 0 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-cont {
+  gap:0;
+  margin: 0;
+  padding: 10px 10px;
+  width: 180px;
+  height: 300px;
+  /* border: 1px solid grey; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  /* transition: 0.1s ease; */
+}
+
+.box-cont:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transform: scale(0.9);
+  transform-origin: center;
+}
+.box-cont img {
+  width: 100%;
+  height: 70%;
+  transition: 0.1s ease-in;
+}
+
+.description {
+  margin-top: 10px;
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes left + right */
+}
+.product-name{
+  font-size: 12px;
+  font-weight: 500;
+
+}
+.box-cont .cart-btn {
+  width: 100%;
+  height: 10%;
+  background-color: rgb(27, 27, 27);
+  color: white;
+  border: none;
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.box-cont .price {
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  height: 5%;
+  margin: 10px 0;
+}
+/* *******************cart section ***************************/
+.cart-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  margin-top: 20px;
+  width: 100vw;
+  height: auto;
+  gap: 10px;
+  flex-direction: column;
+  
+}
+.cartouter-box {
+  background-color: #eeeeee;
+  margin: 20px 10px;
+  padding: 15px 15px;
+  width:380px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 150px;
+  gap: 30px;
+  padding:  5px 0;
+}
+
+.cart-info img {
+  width: 100px;
+  height: 100px;
+}
+.cart-info .qty-btncont {
+  width: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  /* justify-items: center; */
+}
+.qty-btn {
+  
+  width: 40px;
+  height: 25px;
+
+}
+
+.cart-desc {
+  /* background-color: rgba(0, 255, 255, 0.368); */
+  grid-column: 2/4;
+}
+.cart-desc .description {
+  
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+.cart-desc .description .product-name{
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+.cart-desc .random-txt{
+  font-size: 12px;
+}
+.cart-desc .remove-btn {
+  
+  cursor: pointer;
+  padding: 8px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 10px;
+  
+}
+
+.cart-desc .price {
+   font-size: 12px;
+  font-weight: 500;
+}
+.qty-btncont .qbtn {
+  font-size: 15px;
+  outline: none;
+  border: 1px solid grey;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+
+/*************************PRICE_CONT *************************** */
+
+.priceInfo-cont{
+margin: 20px 10px;
+  padding: 15px 15px;
+  width:380px;
+  height: 50%;
+
+
+
+
+        /* margin: 20px 20px;
+        padding: 15px 15px;
+        width:500px;
+        height: 100%; */
+        background-color: #eeeeee;
+        justify-self:center;
+        align-self:center;
+         
+        
+    }
+    .priceInfo-cont h3{
+        font-weight: 500;
+        color: #606060;
+        /* font-weight: 400; */
+    }
+}
